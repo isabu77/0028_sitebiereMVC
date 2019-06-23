@@ -1,0 +1,12 @@
+<article class="col-3 mb-4 d-flex align-items-stretch">
+    <div class="card">
+        <div class="card-body">
+    <div class="figure">
+    <img src="{{ biere.image }}" alt="{{ biere.nom }}">
+       
+    </div>
+            <h5 class="card-title">{{ biere.name }}</h5>
+            <p class="card-text">{{ biere.getExcerpt(200) | raw }}</p>
+        </div>
+    </div>
+</article>

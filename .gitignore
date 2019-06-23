@@ -1,1 +1,7 @@
-config.php
+.env
+.vscode
+www/vendor
+createBiere.sql
+www/composer.lock
+
+

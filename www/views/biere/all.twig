@@ -1,0 +1,26 @@
+{% extends "layout/default.twig" %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+<!-- PAGE PRINCIPALE de présentation des bières -->
+  <section class = "row">
+      <!-- BOUCLE de lecture du tableau pour afficher un article par bière -->
+    {% for biere in bieres %}
+      <article class='text-center col-md-4 col-sm-6'>
+        <h3 class="text-center text-truncate text-success font-weight-bold col-md-12">{{biere.nom}}</h3>
+        <img class="col-4 col-md-4 w-100" src="{{biere.image}}"/>
+        <p class='text-justify col-md-10 offset-md-1 offset-sm-2' >{{biere.excerpt}}</p>
+        <div class = "row">
+          <label class='col-4 offset-2 col-md-4 offset-md-2 text-center font-weight-bold' >Prix</label>
+        </div>
+        <div class = "row">
+          <input readonly hidden type="text" id="{{biere.id}}" value="{{biere.getPrix}}">
+          <input readonly type="text" id="ttc{{biere.id}}" value="{{biere.getPrixTTC}}" class='col-4 offset-2 col-md-4 offset-md-2 text-center font-weight-bold' >
+        </div>
+    </article>
+    {% endfor %}
+</section>
+
+{{ paginate | raw }}
+{% endblock content %}

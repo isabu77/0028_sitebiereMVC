@@ -1,4 +1,4 @@
-# Sitebiere PHP
+# Sitebiere PHP perso à passer en MVC
 
 ## Site de commande de bières contenant :
 

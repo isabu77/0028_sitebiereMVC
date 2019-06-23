@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Les bières d'Isa</title>
+	<link rel="stylesheet" type="text/css" href="/assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/form.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity    ="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="shortcut icon" href="/assets/img/beerIcon.ico">
+</head>
+
+<body class="container-fluid p-0">
+<div class='wrapper container'>
+  <header class="menu" >
+    <h1 class='col-12 rounded text-white text-center bg-info '>Les bières d'Isa</h1>
+    <h1 class='col-12 rounded text-white text-center bg-info '>Compte: </h1>
+    <input type="checkbox" class= "burger">
+  
+    <nav class="rounded">
+      <ul class="row">
+        <li><a href="/">Boutique</a></li>
+        <li><a href="/categories">Commander</a></li>
+        <li><a href="/contact">Mes commandes</a></li>
+        <li><a href="/identification">S'identifier</a></li>
+        <li><a href="/inscription">S'inscrire</a></li>
+        <li><a href="/contact">Déconnexion</a></li>
+      </ul>
+    </nav>
+  </header >
+        {% block content %}
+
+        {% endblock content %}
+	<footer>
+		<nav class="rounded">
+			<ul>
+				<li><a href="#">Mentions Légales</a></li>
+				<li><a href="#">CGV</a></li>
+			</ul>
+		</nav>
+	</footer>
+</div>
+	<script type="text/javascript" src="/assets/js/script.js"></script>
+</body>
+</html>
