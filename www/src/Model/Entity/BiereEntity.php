@@ -3,7 +3,7 @@ namespace App\Model\Entity;
 use \Core\Controller\Helpers\TextController;
 use \Core\Model\Entity;
 /**
- *  Classe Biere : un article du blog 
+ *  Classe Biere : une bière 
  **/
 class BiereEntity extends Entity
 {

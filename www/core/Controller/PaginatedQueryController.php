@@ -72,10 +72,10 @@ class PaginatedQueryController
     /**
      * retourne le nb de pages
      */
-    private function getNbPages(int $id = null): float
+    private function getNbPages(int $iduser = null): float
     {
         if ($this->count === null) {
-            $this->count = $this->classTable->count($id)->nbrow;
+            $this->count = $this->classTable->count($iduser)->nbrow;
         }
         return ceil($this->count / $this->perPage);
     }
@@ -128,7 +128,7 @@ class PaginatedQueryController
      * @param void
      * @return array
      */
-    public function getItemsInId(int $id): ?array
+    public function getItemsInId(int $id = null): ?array
     {
         $currentPage = $this->getCurrentPage();
         $nbPage = $this->getNbPages($id);
@@ -147,4 +147,6 @@ class PaginatedQueryController
         }
         return ($this->items);
     }
+
+    
 }

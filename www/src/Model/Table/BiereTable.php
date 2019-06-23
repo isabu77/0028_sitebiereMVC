@@ -49,6 +49,7 @@ class BiereTable extends Table
             
         }
     }
+    
     /**
      * lecture de tous les articles d'une catégorie d'une page
      */

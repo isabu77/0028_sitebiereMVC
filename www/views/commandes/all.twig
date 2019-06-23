@@ -1,0 +1,41 @@
+{% extends "layout/default.twig" %}
+
+
+{% block title %}{{ title }}{% endblock %}
+
+
+{% block content %}
+
+<!-- LA PAGE HTML  des commandes  -->
+<div class='container'>
+  
+    <table class = 'col-10 offset-1 col-md-10 offset-md-1' >
+    <!-- 1ere ligne : titre -->
+    <thead>
+      <tr class="row">
+          <th class="col-2 offset-1 col-md-2 offset-md-1">N° commande</th> 
+          <th class="col-2 offset-2 col-md-2 offset-md-2">Nb produits</th> 
+          <th class="col-4 offset-1 col-md-2 offset-md-2">Prix total</th> 
+      </tr>
+    </thead>
+    <!-- derniere ligne : total -->
+     <tfoot>
+    <!-- TODO : total de toutes les commandes --> 
+    </tfoot>
+    <tbody>
+    {% for commande in commandes %}
+
+      <tr class="row">
+      <th class="col-2 offset-1 col-md-2 offset-md-1">{{commande.id }}</th>
+      <th class="col-2 offset-2 col-md-2 offset-md-2">{{commande.getIdsproduits()}}</th>
+      <th class="col-4 offset-1 col-md-2 offset-md-2">{{commande.getPrixttc}}</th>
+      </tr>
+  
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+
+{{ paginate | raw }}
+{% endblock %}

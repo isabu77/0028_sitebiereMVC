@@ -14,9 +14,9 @@ $app::load();
 //$router = new App\Router($basepath . 'views');
 $app->getRouter($basepath)
     ->get('/', 'biere#all', 'home')
-    ->get('/article/[*:slug]-[i:id]', 'Post#show', 'post')
-    ->get('/categories', 'Category#all', 'categories')
-    ->get('/category/[*:slug]-[i:id]', 'Category#show', 'category')
+    ->get('/biere/[*:slug]-[i:id]', 'Biere#show', 'biere')
+    ->get('/commandes', 'Commandes#all', 'commandes')
+    ->get('/commandes/[*:slug]-[i:id]', 'Commandes#show', 'category')
     ->get('/contact', 'contact/index', 'contact')
     ->get('/about', 'about/index', 'about')
     ->run();
